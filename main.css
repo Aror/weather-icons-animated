@@ -1,0 +1,142 @@
+body {
+    position: absolute;
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(105, 113, 115, 0.54);
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+	shape-rendering: geometricPrecision;
+	line-height: 0;
+    width: 100px;
+}
+
+footer {
+width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+}
+
+.wrapper {
+    width: 60%;
+    display: flex;
+    FLEX-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    left: 20%;
+    position: relative;
+}
+
+.container-text {
+    text-align: center;
+    width: 100%;
+}
+
+h1, h2, h3, h4 {
+    color: #1f4f71;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.container-text h1 {
+    font-size: 2em;
+}
+
+.container-text h2 {
+    margin: 0 0 3em 0;
+    padding: 0;
+    line-height: 0;
+    font-size: 1.5em;
+}
+
+h3, h4 {
+    font-size: 0.7em;
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    padding:1% 0;
+}
+
+.container-icon-clear-day, .container-icon-snow, .container-icon-clear-night, .container-icon-rain, .container-icon-sleet, .container-icon-wind, .container-icon-fog, .container-icon-cloudy, .container-icon-partly-cloudy-day, .container-icon-partly-cloudy-night, .container-icon-hail, .container-icon-thunderstorm, .container-icon-tornado {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+}
+
+.icon-sun-beam {
+	fill: #ff0
+}
+
+.icon-sun-fill {
+	fill: #ffc100
+}
+
+.icon-sun-outline {
+	fill: #ff0
+}
+
+.icon-cloud-fill {
+	fill: #00b9ff
+}
+
+.icon-cloud-outline, .icon-snowflake-outline {
+	fill: #fff
+}
+
+.icon-snowflake-fill {
+	fill: #a1e2fc
+}
+
+.icon-moon-outline {
+	fill: #fff
+}
+
+.icon-raindrop-fill {
+	fill: #a1e2fc
+}
+
+.icon-raindrop-outline {
+	fill: #00b9ff
+}
+
+.icon-wind-fill {
+	fill: #fff
+}
+
+.icon-fog-line1-fill {
+	fill: #7bd1f3
+}
+
+.icon-fog-line2-fill {
+	fill: #a1e2fc
+}
+
+.icon-fog-line3-fill {
+	fill: #7bd1f3
+}
+
+.icon-hail-fill {
+	fill: #a1e2fc
+}
+
+.icon-tornado-fill {
+	fill: #fff
+}
+
+.icon-thunderstorm-lightning-fill {
+	fill: #fff000
+}
+
