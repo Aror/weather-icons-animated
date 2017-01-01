@@ -6,9 +6,15 @@ Version 1.0 - January 1, 2017
 
 Get started: https://github.com/Aror/weather-icons-animated.git
 
-Basic Usage
+## Preview
+http://ospadov.com/weather-icons-animated
 
-## Using an icon in your project:
+## Example
+http://ospadov.com/weather-icons-animated/example/index.html
+
+## Basic Usage
+
+### Using an icon in your project:
 
 Include in your index.html (or download separately):
 * ```<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>```
