@@ -14,10 +14,12 @@ $(".container-icon-fog").on("click", fogAnimation);
 $(".container-icon-wind").on("click", windAnimation);
 $(".container-icon-tornado").on("click", tornadoAnimation);
 
+//Stops all currently active animations
 function killAllAnimation() {
     TweenMax.killAll(false,true,true,true);
 }
 
+//Icon Clear Day
 function clearDayAnimation() {
     killAllAnimation();
     var sun = $(".icon-sun");
@@ -28,6 +30,7 @@ function clearDayAnimation() {
     TweenMax.to(sunBeamOdd, 4, { scale: 0.5, transformOrigin: "50% 50%", repeat: -1, yoyo: true, ease: Linear.easeNone, delay: 3});
 }
 
+//Icon Clear Night
 function clearNightAnimation() {
     killAllAnimation();
     var moon = $("#icon-moon-part-moon");
@@ -46,6 +49,7 @@ function clearNightAnimation() {
     tlS.to(starLargeOne, 5, {scale: 0.5, transformOrigin: "50% 50%", repeat: -1, smoothOrigin: true, yoyo: true, ease: Linear.easeNone},2.5);
 }
 
+//Icon Partly Cloudy Day
 function partlyCloudyDayAnimation() {
     killAllAnimation();
     var sun = $("#icon-pcd-sun");
@@ -58,6 +62,7 @@ function partlyCloudyDayAnimation() {
     TweenMax.to(sunBeamOdd, 4, { scale: 0.5, transformOrigin: "50% 50%", repeat: -1, yoyo: true, ease: Linear.easeNone, delay: 3});
 }
 
+//Icon Partly Cloudy Night
 function partlyCloudyNightAnimation() {
     killAllAnimation();
     var moon = $("#icon-pcn-moon");
@@ -66,6 +71,7 @@ function partlyCloudyNightAnimation() {
     tlm.to(moon, 5, {ease: Linear.easeNone, transformOrigin: "50% 50%", smoothOrigin: true, yoyo: true, repeat:-1, rotation:"20"});
 }
 
+//Icon Cloudy
 function cloudyAnimation() {
     killAllAnimation();
     var cloud = $("#icon-cloudy");
@@ -80,6 +86,7 @@ function cloudyAnimation() {
     }, ease: Linear.easeNone, rotation:0.01, yoyo:true, repeat:-1});
 }
 
+//Icon Rain
 function rainAnimation() {
     killAllAnimation();
     var raindropFill = $("#icon-rain-raindrop-fill");
@@ -105,6 +112,7 @@ function rainAnimation() {
     tlRO.to(raindropOutline, 1.25, {autoAlpha:1, repeat:1, yoyo:true, ease: Linear.easeNone},0);
 }
 
+//Icon Thunderstorm
 function thunderstormAnimation() {
     killAllAnimation();
     var lightning = $("#icon-thunderstorm-lightning");
@@ -113,6 +121,7 @@ function thunderstormAnimation() {
     tl.to(lightning, 2, {ease: Elastic.easeOut.config(3, 0.1), autoAlpha:1, yoyo: true, repeat:-1});
 }
 
+//Icon Snow
 function snowAnimation() {
     killAllAnimation();
     var snow = $("#snowflake");
@@ -128,6 +137,7 @@ function snowAnimation() {
     tl.to(snow, 5, {autoAlpha:1, repeat:1, yoyo:true, ease: Linear.easeNone}, 0.5);
 }
 
+//Icon Hail
 function hailAnimation() {
     killAllAnimation();
     var hailOne = $("#icon-hail-drop1");
@@ -196,6 +206,7 @@ function hailAnimation() {
     tlTwo.to(hailTwo, 0.5, {autoAlpha:1, repeat:1, yoyo:true, ease: Linear.easeNone}, 0.5);
 }
 
+//Icon Sleet
 function sleetAnimation() {
     killAllAnimation();
     var snow = $("#icon-sleet-snowflake");
@@ -232,6 +243,7 @@ function sleetAnimation() {
     tlrt.to(raindropTwo, 2.5, {autoAlpha:1, repeat:1, yoyo:true, ease: Linear.easeNone}, 0);
 }
 
+//Icon Fog
 function fogAnimation() {
     killAllAnimation();
     var fogOne = $("#icon-fog-1");
@@ -256,6 +268,7 @@ function fogAnimation() {
     }, ease: Linear.easeNone, rotation:0.01, repeat:-1});
 }
 
+//Icon Wind
 function windAnimation() {
     killAllAnimation();
     var wind = $("#icon-wind");
@@ -270,6 +283,7 @@ function windAnimation() {
     }, ease: Linear.easeNone, rotation:0.01, yoyo:true, repeat:-1});
 }
 
+//Icon Tornado
 function tornadoAnimation() {
     killAllAnimation();
     var tornadoOne = $("#tornado-line-1");

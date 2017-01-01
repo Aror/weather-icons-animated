@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Animated Weather Icons - Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+
+<script>
+window.onload = function () {
+
+$(".container-icon-clear-day").on("click", clearDayAnimation);
+
+function clearDayAnimation() {
+    var sun = $(".icon-sun");
+    var sunBeamEven = $(".icon-sun-beam-animated:even");
+    var sunBeamOdd = $(".icon-sun-beam-animated:odd");
+    TweenMax.to(sun, 12, { rotation: "+=360", svgOrigin: "50 50", smoothOrigin: true, repeat: -1, ease: Linear.easeNone });
+    TweenMax.to(sunBeamEven, 4, { scale: 0.5, transformOrigin: "50% 50%", repeat: -1, yoyo: true, ease: Linear.easeNone });
+    TweenMax.to(sunBeamOdd, 4, { scale: 0.5, transformOrigin: "50% 50%", repeat: -1, yoyo: true, ease: Linear.easeNone, delay: 3});
+}
+
+}
+</script>
+
+<style>
+body {
+    position: absolute;
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(105, 113, 115, 0.54);
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+	shape-rendering: geometricPrecision;
+	line-height: 0;
+    width: 100px;
+}
+
+footer {
+width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+}
+
+.wrapper {
+    width: 60%;
+    display: flex;
+    FLEX-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    left: 20%;
+    position: relative;
+}
+
+.container-text {
+    text-align: center;
+    width: 100%;
+}
+
+h1, h2, h3, h4 {
+    color: #1f4f71;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.container-text h1 {
+    font-size: 2em;
+}
+
+.container-text h2 {
+    margin: 0 0 3em 0;
+    padding: 0;
+    line-height: 0;
+    font-size: 1.5em;
+}
+
+h3, h4 {
+    font-size: 0.7em;
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    padding:1% 0;
+}
+
+.container-icon-clear-day {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+}
+
+.icon-sun-beam {
+	fill: #ff0
+}
+
+.icon-sun-fill {
+	fill: #ffc100
+}
+
+.icon-sun-outline {
+	fill: #ff0
+}
+</style>
+</head>
+
+<body>
+    <div class="wrapper">
+    <div class="container-text">
+    <h1> Animated Weather Icons Example </h1>
+    <h2> Click the icon for it to animate </h2>
+    </div>
+    <div class="container-icon-clear-day">
+        <svg version="1.1" viewBox="20 20 60 60" id="icon-sun-animated">
+            <g class="icon-sun">
+                <path class="icon-sun-beam icon-sun-beam-animated" d="M72.03,51.999h-3.998c-1.105,0-2-0.896-2-1.999s0.895-2,2-2h3.998c1.104,0,2,0.896,2,2S73.136,51.999,72.03,51.999z"
+                />
+                <path class="icon-sun-beam icon-sun-beam-animated" d="M64.175,38.688c-0.781,0.781-2.049,0.781-2.828,0c-0.781-0.781-0.781-2.047,0-2.828l2.828-2.828c0.779-0.781,2.047-0.781,2.828,0c0.779,0.781,0.779,2.047,0,2.828L64.175,38.688z"
+                />
+                <path class="icon-sun-beam icon-sun-beam-animated" d="M50.034,34.002c-1.105,0-2-0.896-2-2v-3.999c0-1.104,0.895-2,2-2c1.104,0,2,0.896,2,2v3.999C52.034,33.106,51.136,34.002,50.034,34.002z"
+                />
+                <path class="icon-sun-beam icon-sun-beam-animated" d="M35.893,38.688l-2.827-2.828c-0.781-0.781-0.781-2.047,0-2.828c0.78-0.781,2.047-0.781,2.827,0l2.827,2.828c0.781,0.781,0.781,2.047,0,2.828C37.94,39.469,36.674,39.469,35.893,38.688z"
+                />
+                <path class="icon-sun-beam icon-sun-beam-animated" d="M34.034,50c0,1.104-0.896,1.999-2,1.999h-4c-1.104,0-1.998-0.896-1.998-1.999s0.896-2,1.998-2h4C33.14,48,34.034,48.896,34.034,50z"
+                />
+                <path class="icon-sun-beam icon-sun-beam-animated" d="M35.893,61.312c0.781-0.78,2.048-0.78,2.827,0c0.781,0.78,0.781,2.047,0,2.828l-2.827,2.827c-0.78,0.781-2.047,0.781-2.827,0c-0.781-0.78-0.781-2.047,0-2.827L35.893,61.312z"
+                />
+                <path class="icon-sun-beam icon-sun-beam-animated" d="M50.034,65.998c1.104,0,2,0.895,2,1.999v4c0,1.104-0.896,2-2,2c-1.105,0-2-0.896-2-2v-4C48.034,66.893,48.929,65.998,50.034,65.998z"
+                />
+                <path class="icon-sun-beam icon-sun-beam-animated" d="M64.175,61.312l2.828,2.828c0.779,0.78,0.779,2.047,0,2.827c-0.781,0.781-2.049,0.781-2.828,0l-2.828-2.827c-0.781-0.781-0.781-2.048,0-2.828C62.126,60.531,63.392,60.531,64.175,61.312z"
+                />
+                <circle class="icon-sun-outline" cx="50.034" cy="50" r="11.999" />
+                <circle class="icon-sun-fill" cx="50.034" cy="50" r="7.999" /> </g>
+        </svg>
+        <h3>Clear Day</h3>
+    </div>
+
+<footer>
+    <h4>Icons have been animated using GSAP JavaScript framework: https://greensock.com/. Icons are cross-browser friendly. Work on IE 11. </h4>
+    <h4>This set of icons is perfect for the DarkSky weather API: https://darksky.net </h4>
+    <h4> Original icons by Noah Blon: http://codepen.io/noahblon/pen/lxukH/ </h4>
+</footer>
+
+</div>
+</body>
+
+</html>
