@@ -6,12 +6,6 @@ Version 1.0 - January 1, 2017
 
 Get started: https://github.com/Aror/weather-icons-animated.git
 
-## Preview
-http://ospadov.com/weather-icons-animated
-
-## Example
-http://ospadov.com/weather-icons-animated/example/index.html
-
 ## Basic Usage
 
 ### Using an icon in your project:
